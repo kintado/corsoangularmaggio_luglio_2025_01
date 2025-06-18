@@ -1,0 +1,17 @@
+#dashboard{
+    background-color:orange;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding: 10px;
+    font: 16px/1.5 sans-serif;
+
+}
+
+textarea{
+    margin: 10px;
+    width: 100%;
+    height: 100px;
+}
