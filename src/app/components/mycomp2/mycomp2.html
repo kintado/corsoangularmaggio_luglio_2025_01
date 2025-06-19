@@ -1,3 +1,16 @@
 <div id="mycomp2" [style]="{ backgroundColor: bgcol()}">
     <p>mycomp works!</p>
+  <select #miaselect>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="lightblue">Light Blue</option>
+        <option value="lightgreen">Light Green</option>    
+    </select>
+    <button (click)="inviafuoricolore()">Colora esterno</button>
+
+    <label>Testo da inviare</label>
+    <textarea #textarea2></textarea>  
+    <button (click)="inviatestofuori()">INVIA</button>
 </div>

@@ -1,4 +1,4 @@
-<div id="dashboard" class="container">
+<div id="dashboard" class="container" [style.backgroundColor]="coloreSfondo">
     <h1>dashboard works!</h1>
     <div class="row">
         <div class="col-6">      
@@ -25,12 +25,28 @@
     
     <div class="row">
         <div class="col-6">            
-            <mycomp [bgcol]="mycompbgcol"></mycomp>
+            <mycomp [bgcol]="mycompbgcol" (ColoraEsterno)="CambaiaColoreSfondo($event)" (ArrivaTesto)="setTestoTextarea1($event)" [ComponentePadre]="this"></mycomp>
         </div>
         <div class="col-6">            
-        <mycomp2 [bgcol]="mycompbgcol2()"></mycomp2>
+            <mycomp2 [bgcol]="mycompbgcol2()" (Inviafuoricolore)="CambaiaColoreSfondo($event)" (ArrivaTesto)="setTestoTextarea2($event)"></mycomp2>
         </div>
     </div>
-    <textarea name="" id=""></textarea>
+    <div class="row">
+        <div class="col-6">    
+            <textarea  #area1>{{testoTextarea1}}</textarea>    
+        </div>
+        <div class="col-6">  
+            <textarea  #area2>{{testoTextarea2}}</textarea>      
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">    
+            <button (click)="sparisciTextarea1()">Sparisci TEXTAREA</button>
+        </div>    
+        <div class="col-6">    
+            <button (click)="sparisciTextarea2()">Sparisci TEXTAREA</button>
+        </div>
+    </div>
+    
 </div>
 
